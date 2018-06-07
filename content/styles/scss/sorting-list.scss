@@ -1,0 +1,35 @@
+.sorting-list{
+    @include clearUl();
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 70px;
+    li{
+        background: #F7F8F9;
+        border: solid 1px #C2CAD0;
+        margin-left: -1px;
+        &:first-child{
+            border-radius: 3px 0 0 3px;
+        }
+        &:last-child{
+            border-radius: 0 3px 3px 0;
+        }
+        button{
+            border: none;
+            padding: 10px 20px;
+            margin: 0;
+            background: transparent;
+            font-size: 14px;
+            color: #61696E;
+            transition: background .2s linear, box-shadow .2s linear, color .2s linear;
+            &:hover{
+                background: rgba(#000, .05);
+            }
+            &.active{
+                background: #1A72B0;
+                color: #fff;
+                box-shadow: 0 1px 3px rgba(#000, 0.2);
+            }
+        }
+    }
+}

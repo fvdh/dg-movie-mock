@@ -1,0 +1,25 @@
+<ul class="sorting-list">
+    <li ng-repeat="(key, item) in decades | unique: 'decade' | orderBy: '-decade'">
+        <button ng-click="filterOnDecade(item.decade, item.id)" ng-class="{active: activeTab == 'tab-{{item.decade}}'}">{{item.decade}}'s</button>
+    </li>
+</ul>
+
+<ul class="movie-list">
+    <li ng-repeat="movie in movies | orderBy: 'movieInfo.Title'">
+        <article class="movie">
+            <div class="movie-poster">
+                <img ng-src="{{movie.movieInfo.Poster}}" alt="Movie poster from {{movie.movieInfo.Title}}">
+            </div>
+            <div class="movie-content">
+                <h1 class="movie-title">{{movie.movieInfo.Title}} </h1>
+                <div class="movie-stats">
+                    <span class="movie-stats-rated">{{movie.movieInfo.Rated}}</span>
+                    <span class="movie-stats-runtime">{{movie.movieInfo.Runtime}}</span>
+                    <span class="movie-stats-released">{{movie.movieInfo.Released}}</span>
+                </div>
+                <p class="movie-plot">{{movie.movieInfo.Plot}}</p>
+                <a class="movie-url" href="https://www.imdb.com/title/{{movie.movieInfo.imdbID}}" title="View {{movie.movieInfo.Title}} on IMDB" target="_blank">View on IMDB</a>
+            </div>
+        </article>
+    </li>
+</ul>

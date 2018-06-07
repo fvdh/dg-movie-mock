@@ -1,0 +1,23 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin clearUl() {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+$font-regular: 400;
+$font-bold: 700;
+$font-color: #303436;
+
+@import 'sorting-list';
+@import 'movie-list';
+
+
+.content-wrapper{
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}

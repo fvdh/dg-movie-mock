@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <title>Movies</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="content/styles/css/normalize.css">
+    <link rel="stylesheet" href="content/styles/css/main.css">
+    <script src="https://az168019.vo.msecnd.net/scripts/libs/modernizr.custom.js"></script>
+
+</head>
+
+<body ng-app="dgMovieApp">
+
+    <section class="content-wrapper" ng-controller="mainCtrl">
+        <movie-list></movie-list>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/mainController.js"></script>
+    <script src="movie-list/movie-list.component.js"></script>
+</body>
+
+</html>

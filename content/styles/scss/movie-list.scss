@@ -1,0 +1,91 @@
+.movie-list {
+    @include clearUl();
+
+    li {
+        margin-bottom: 15px;
+    }
+}
+
+.movie {
+    display: flex;
+    background: #e8ebee;
+    border: solid 2px $font-color;
+    align-items: start;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+
+    .movie-poster {
+        width: 140px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+    .movie-content {
+        width: calc(100% - 140px);
+        padding-left: 15px;
+
+        .movie-title {
+            margin: 0;
+            border-bottom: solid 1px #8d989e;
+            color: $font-color;
+            font-size: 24px;
+            padding-bottom: 5px;
+        }
+
+        .movie-stats {
+            padding: 10px 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: $font-color;
+            &-rated {
+                border: solid 1px #919ba0;
+                color: #919ba0;
+                border-radius: 4px;
+                padding: 2px 8px;
+                font-family: courier;
+            }
+
+            &-runtime {
+                margin-left: 10px;
+            }
+
+            &-released {
+                float: right;
+            }
+        }
+
+        .movie-plot {
+            margin: 0;
+            padding-bottom: 50px;
+            font-size: 16px;
+            line-height: 21px;
+            color: $font-color;
+        }
+
+        .movie-url {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            display: block;
+            background: #f9b44a;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: $font-bold;
+            transition: background .2s linear, box-shadow .2s linear;
+            &:hover{
+                background: darken( #f9b44a, 12% );
+                box-shadow: 0 1px 3px rgba(#000, 0.2);
+            }
+        }
+    }
+}
