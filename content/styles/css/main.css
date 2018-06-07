@@ -1,110 +1,27 @@
-* {
-  font-family: 'Open Sans', sans-serif; }
+* { font-family: 'Open Sans', sans-serif; }
 
-.sorting-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 70px; }
-  .sorting-list li {
-    background: #F7F8F9;
-    border: solid 1px #C2CAD0;
-    margin-left: -1px; }
-    .sorting-list li:first-child {
-      border-radius: 3px 0 0 3px; }
-    .sorting-list li:last-child {
-      border-radius: 0 3px 3px 0; }
-    .sorting-list li button {
-      border: none;
-      padding: 10px 20px;
-      margin: 0;
-      background: transparent;
-      font-size: 14px;
-      color: #61696E;
-      transition: background .2s linear, box-shadow .2s linear, color .2s linear; }
-      .sorting-list li button:hover {
-        background: rgba(0, 0, 0, 0.05); }
-      .sorting-list li button.active {
-        background: #1A72B0;
-        color: #fff;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+.sorting-list { padding: 0; margin: 0; list-style: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; height: 70px; }
+.sorting-list li { background: #F7F8F9; border: solid 1px #C2CAD0; margin-left: -1px; }
+.sorting-list li:first-child { border-radius: 3px 0 0 3px; }
+.sorting-list li:last-child { border-radius: 0 3px 3px 0; }
+.sorting-list li button { border: none; padding: 10px 20px; margin: 0; background: transparent; font-size: 14px; color: #61696E; -webkit-transition: background .2s linear, color .2s linear, -webkit-box-shadow .2s linear; transition: background .2s linear, color .2s linear, -webkit-box-shadow .2s linear; transition: background .2s linear, box-shadow .2s linear, color .2s linear; transition: background .2s linear, box-shadow .2s linear, color .2s linear, -webkit-box-shadow .2s linear; }
+.sorting-list li button:hover { background: rgba(0, 0, 0, 0.05); }
+.sorting-list li button.active { background: #1A72B0; color: #fff; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
-.movie-list {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-  .movie-list li {
-    margin-bottom: 15px; }
+.movie-list { padding: 0; margin: 0; list-style: none; }
+.movie-list li { margin-bottom: 15px; }
 
-.movie {
-  display: flex;
-  background: #e8ebee;
-  border: solid 2px #303436;
-  align-items: start;
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 15px;
-  position: relative; }
-  .movie .movie-poster {
-    width: 140px;
-    border-radius: 8px;
-    overflow: hidden; }
-    .movie .movie-poster img {
-      max-width: 100%;
-      display: block; }
-  .movie .movie-content {
-    width: calc(100% - 140px);
-    padding-left: 15px; }
-    .movie .movie-content .movie-title {
-      margin: 0;
-      border-bottom: solid 1px #8d989e;
-      color: #303436;
-      font-size: 24px;
-      padding-bottom: 5px; }
-    .movie .movie-content .movie-stats {
-      padding: 10px 0;
-      margin-bottom: 10px;
-      font-size: 14px;
-      color: #303436; }
-      .movie .movie-content .movie-stats-rated {
-        border: solid 1px #919ba0;
-        color: #919ba0;
-        border-radius: 4px;
-        padding: 2px 8px;
-        font-family: courier; }
-      .movie .movie-content .movie-stats-runtime {
-        margin-left: 10px; }
-      .movie .movie-content .movie-stats-released {
-        float: right; }
-    .movie .movie-content .movie-plot {
-      margin: 0;
-      padding-bottom: 50px;
-      font-size: 16px;
-      line-height: 21px;
-      color: #303436; }
-    .movie .movie-content .movie-url {
-      position: absolute;
-      right: 15px;
-      bottom: 15px;
-      display: block;
-      background: #f9b44a;
-      padding: 10px 30px;
-      text-decoration: none;
-      color: #fff;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      transition: background .2s linear, box-shadow .2s linear; }
-      .movie .movie-content .movie-url:hover {
-        background: #f79b0f;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+.movie { display: -webkit-box; display: -ms-flexbox; display: flex; background: #e8ebee; border: solid 2px #303436; -webkit-box-align: start; -ms-flex-align: start; align-items: start; border-radius: 8px; overflow: hidden; padding: 15px; position: relative; }
+.movie .movie-poster { width: 140px; border-radius: 8px; overflow: hidden; }
+.movie .movie-poster img { max-width: 100%; display: block; }
+.movie .movie-content { width: calc(100% - 140px); padding-left: 15px; }
+.movie .movie-content .movie-title { margin: 0; border-bottom: solid 1px #8d989e; color: #303436; font-size: 24px; padding-bottom: 5px; }
+.movie .movie-content .movie-stats { padding: 10px 0; margin-bottom: 10px; font-size: 14px; color: #303436; }
+.movie .movie-content .movie-stats-rated { border: solid 1px #919ba0; color: #919ba0; border-radius: 4px; padding: 2px 8px; font-family: courier; }
+.movie .movie-content .movie-stats-runtime { margin-left: 10px; }
+.movie .movie-content .movie-stats-released { float: right; }
+.movie .movie-content .movie-plot { margin: 0; padding-bottom: 50px; font-size: 16px; line-height: 21px; color: #303436; }
+.movie .movie-content .movie-url { position: absolute; right: 15px; bottom: 15px; display: block; background: #f9b44a; padding: 10px 30px; text-decoration: none; color: #fff; border-radius: 4px; font-size: 14px; font-weight: 700; -webkit-transition: background .2s linear, -webkit-box-shadow .2s linear; transition: background .2s linear, -webkit-box-shadow .2s linear; transition: background .2s linear, box-shadow .2s linear; transition: background .2s linear, box-shadow .2s linear, -webkit-box-shadow .2s linear; }
+.movie .movie-content .movie-url:hover { background: #f79b0f; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
-.content-wrapper {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto; }
-
-/*# sourceMappingURL=main.css.map */
+.content-wrapper { width: 90%; max-width: 800px; margin: 0 auto; }
